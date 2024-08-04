@@ -1,0 +1,64 @@
+.default,
+.primary,
+.dark,
+.ghost,
+.secondary {
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+.default {
+  background-color: var(--uiColor);
+  color: var(--backgroundColor);
+  border: 2px solid transparent;
+}
+.default:hover {
+  background-color: transparent;
+  border-color: var(--backgroundColor);
+}
+.primary {
+  background-color: var(--uiColor);
+  color: var(--backgroundColor);
+  border: 2px solid transparent;
+}
+.primary:hover {
+  background-color: var(--textColor);
+  transform: translateY(-8px);
+}
+.dark {
+  background-color: var(--textColor);
+  color: var(--backgroundColor);
+}
+.dark:hover {
+  background-color: var(--uiColor);
+  transform: translateY(-8px);
+}
+.ghost {
+  background-color: var(--uiColor);
+  color: var(--backgroundColor);
+}
+.ghost:hover {
+  background-color: var(--uiSecondHoverColor);
+  color: var(--textColor);
+}
+.secondary {
+  background-color: var(--uiColor);
+}
+.secondary:hover {
+  background-color: var(--textColor);
+  color: var(--backgroundColor);
+}
+.small {
+  padding: 8px 24px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.middle {
+  padding: 12px 36px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.large {
+  padding: 16px 48px;
+  font-size: 1.8rem;
+  font-weight: 800;
+}

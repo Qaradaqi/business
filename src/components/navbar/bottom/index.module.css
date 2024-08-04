@@ -1,0 +1,6 @@
+.bottomNav {
+  background-color: var(--backgroundColor);
+  border-radius: 0 0 15px 15px;
+  padding: 5px 15px;
+  filter: drop-shadow(2px 2px 2px var(--textSecondColor));
+}

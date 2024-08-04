@@ -1,0 +1,14 @@
+.top {
+  background-color: var(--uiHoverColor);
+  color: var(--backgroundColor);
+}
+.img {
+  border-radius: 50%;
+  border: 2px solid var(--uiColor);
+  filter: drop-shadow(2px 2px 5px var(--uiColor));
+}
+.title {
+  font-size: 1.8rem;
+  color: var(--uiColor);
+  font-weight: 700;
+}

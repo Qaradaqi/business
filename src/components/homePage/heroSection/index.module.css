@@ -1,0 +1,127 @@
+.herosection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  z-index: 1;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 35px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: var(--uiColor);
+}
+.swiperslide {
+  text-align: center;
+  font-size: 18px;
+  color: var(--textColor);
+
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderInner {
+  width: 100%;
+  height: 100%;
+  background-position: center 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.sliderInner::after {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.tagline {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  color: var(--backgroundColor);
+  font-weight: 600;
+  transform: translateY(100px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 0ms;
+  opacity: 0;
+}
+.title {
+  position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  color: var(--uiColor);
+  font-weight: 800;
+  transform: translateY(100px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 250ms;
+  opacity: 0;
+}
+.btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  transform: translateY(100px);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: 450ms;
+  opacity: 0;
+}
+.btnLink {
+  font-size: 1.4rem;
+  color: var(--backgroundColor);
+  font-weight: 500;
+  padding: 10px 25px;
+  background-color: var(--uiColor);
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: border background-color;
+}
+.btnLink:hover {
+  background-color: transparent;
+  border-color: var(--backgroundColor);
+}
+.sliderInner.active .tagline,
+.sliderInner.active .title,
+.sliderInner.active .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.customNavigationButton {
+  color: var(--backgroundColor);
+  background-color: rgba(0, 0, 0, 0.25);
+  border: none;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  padding: 22px 26.69px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.customNavigationButtonPrev {
+  left: 10px;
+}
+.customNavigationButtonNext {
+  right: 10px;
+}
+.customNavigationButtonNext:hover,
+.customNavigationButtonPrev:hover {
+  opacity: 0.8;
+}
