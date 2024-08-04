@@ -7,6 +7,7 @@
   z-index: 1;
 }
 .swiper {
+  position: relative;
   width: 100%;
   height: 100%;
   margin-left: auto;
@@ -36,10 +37,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 }
 .sliderInner::after {
   position: absolute;
-  z-index: 0;
   content: "";
   top: 0;
   left: 0;
@@ -49,7 +50,7 @@
 }
 .tagline {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-size: 3rem;
   color: var(--backgroundColor);
   font-weight: 600;
@@ -60,7 +61,7 @@
 }
 .title {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-size: 4.5rem;
   color: var(--uiColor);
   font-weight: 800;
@@ -71,7 +72,7 @@
 }
 .btn {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin-top: 10px;
   transform: translateY(100px);
   transition: transform 0.8s ease, opacity 0.8s ease;
@@ -109,7 +110,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 2;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,4 +125,25 @@
 .customNavigationButtonNext:hover,
 .customNavigationButtonPrev:hover {
   opacity: 0.8;
+}
+.overlayImage {
+  position: absolute;
+  top: 0;
+  right: -100%; /* Start outside the view */
+  width: 480px; /* Adjust as needed */
+  height: 100%;
+  transition: right 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("/asset/image/hs/shape-slide-33.png"); */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  opacity: 0;
+}
+.overlayImage.overlayImageActive {
+  right: 0; /* Slide into view */
+  opacity: 1;
+  z-index: 1;
 }

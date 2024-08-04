@@ -1,17 +1,17 @@
 'use client';
 
 import styles from './index.module.css';
+import { useEffect, useRef, useState } from 'react';
+import SwiperCore from 'swiper';
+import Button from '../../ui/button';
+import data from './data.json';
 // Swiper components, modules and styles
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import data from './data.json';
-import { useEffect, useRef, useState } from 'react';
-import SwiperCore from 'swiper';
-import Link from 'next/link';
-import Button from '../../ui/button';
+import 'swiper/css/effect-coverflow';
 
 interface HTMLElementWithSwiper extends HTMLElement {
   swiper: any;
@@ -21,6 +21,7 @@ const HeroSection = () => {
   const prevRef = useRef<HTMLElement>(null);
   const nextRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [isOverlayActive, setIsOverlayActive] = useState<boolean>(true);
   const [prevImage, setPrevImage] = useState<string>('');
   const [nextImage, setNextImage] = useState<string>('');
   const [hoveredButton, setHoveredButton] = useState<'prev' | 'next' | null>(null);
@@ -35,6 +36,7 @@ const HeroSection = () => {
       swiperEl.swiper.navigation.update();
     }
   }, []);
+
   useEffect(() => {
     const prevIndex: number = (activeIndex - 1 + data.length) % data.length;
     const nextIndex: number = (activeIndex + 1) % data.length;
@@ -50,7 +52,19 @@ const HeroSection = () => {
   const slideClass = (index: number) => {
     return index === activeIndex ? styles.active : null;
   };
-  console.log(activeIndex);
+
+  useEffect(() => {
+    // Remove overlay image when slide change starts
+    setIsOverlayActive(false);
+
+    // Add overlay image after a delay to allow transition
+    const timer = setTimeout(() => {
+      setIsOverlayActive(true);
+    }, 300); // Adjust the delay to match your transition duration
+
+    return () => clearTimeout(timer); // Clear the timer if the component unmounts
+  }, [activeIndex]);
+
   return (
     <div className={styles.herosection}>
       <Swiper
@@ -58,6 +72,9 @@ const HeroSection = () => {
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
+        dir='rtl'
+        effect={'coverflow'}
+        grabCursor={true}
         // pagination={{ type: "bullets", clickable: true }}
         autoplay={
           {
@@ -65,7 +82,6 @@ const HeroSection = () => {
             disableOnInteraction: false
           }
         }
-        dir='ltr'
         loop={true}
         modules={[Autoplay, Navigation]}
         className={styles.swiper}
@@ -88,7 +104,6 @@ const HeroSection = () => {
                 {item.title}
               </h2>
               <div className={styles.btn}>
-                {/* <Link className={`${styles.btnLink} flex align-center justify-center`} href={'/contact'}>تماس با آرشید</Link> */}
                 <Button type='default' size='middle' href='/contact'>تماس با آرشید</Button>
               </div>
             </div>
@@ -107,6 +122,11 @@ const HeroSection = () => {
           onMouseLeave={() => setHoveredButton(null)}
         ></i>
       </Swiper>
+      <div
+        className={`${styles.overlayImage} ${isOverlayActive ? styles.overlayImageActive : ''}`}
+        style={{backgroundImage: `url("/asset/image/hs/shape-slide-33.png")`}}
+      >
+      </div>
     </div>
   );
 };

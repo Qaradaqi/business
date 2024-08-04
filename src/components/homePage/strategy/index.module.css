@@ -1,0 +1,36 @@
+.head {
+  position: relative;
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 50px;
+}
+.headTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--textColor);
+  position: relative;
+}
+.headTitle::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 35px;
+  background-color: var(--uiColor);
+}
+.headDots {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.items {
+  width: 100%;
+  padding: 25px 0;
+  overflow: hidden;
+}
+.item {
+  width: 25%;
+}

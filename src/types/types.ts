@@ -1,3 +1,4 @@
+
 export interface TopMenuItemType {
   icon: React.JSX.Element;
   title: string;
@@ -23,4 +24,20 @@ export interface ButtonType {
   leftIcon?: string;
   rightICon?: string;
   size: 'small' | 'middle' | 'large';
+}
+
+export interface ProjectType {
+  id: number;
+  title: string;
+  body: string;
+  category: string;
+  href: string;
+  image: string;
+}
+export interface StrategyType {
+  id: number;
+  icon: React.ReactNode;
+  title: string;
+  body: string;
+  href: string;
 }
