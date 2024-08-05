@@ -1,0 +1,93 @@
+.footerContent {
+  background-color: #051934;
+  padding: 85px 15px 35px;
+  color: #fff;
+}
+.cols {
+  padding: 45px 0;
+  gap: 80px;
+  border-bottom: 1px solid var(--uiColor);
+}
+.col {
+  width: 100%;
+}
+.colTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 25px;
+  position: relative;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.colTitle::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--uiColor);
+}
+.colBody {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2.5;
+  color: #fff;
+  text-align: justify;
+}
+.social {
+  margin-top: 35px;
+  width: 100%;
+  flex-grow: 1;
+}
+.socialTitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.socialItems {
+  margin-right: 20px;
+}
+.socialItem {
+  width: 25px;
+  height: 20px;
+  fill: var(--textSecondColor);
+  transition: transform 0.3s ease-in-out;
+}
+.socialItem:hover {
+  transform: translateY(-8px);
+}
+.colItem {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 2.5;
+  color: #fff;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  transition: color 0.3s ease-in-out;
+}
+.colItem:hover {
+  color: var(--uiColor);
+}
+.subscribe {
+  width: 100%;
+  margin: 45px 0 15px;
+}
+.certificates {
+  width: 100%;
+}
+.certificate {
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: var(--backgroundColor);
+}
+.designer {
+  font-size: 1.2rem;
+  color: var(--backgroundColor);
+  padding: 5px 0;
+}

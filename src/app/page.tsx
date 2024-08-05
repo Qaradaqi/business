@@ -8,6 +8,7 @@ import PreviousProjects from '@/components/homePage/projects';
 import projects from '@/components/homePage/projects/data.json';
 import Strategies from '@/components/homePage/strategy';
 import Consult from '@/components/homePage/consult';
+import ProjectSteps from '@/components/homePage/projectsteps';
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
         <Strategies />
         <Consult />
       </div>
+      <ProjectSteps />
     </>
   );
 };

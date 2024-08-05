@@ -48,7 +48,6 @@ const HeroSection = () => {
     setActiveIndex(swiper.realIndex);
   };
 
-
   const slideClass = (index: number) => {
     return index === activeIndex ? styles.active : null;
   };
@@ -60,7 +59,7 @@ const HeroSection = () => {
     // Add overlay image after a delay to allow transition
     const timer = setTimeout(() => {
       setIsOverlayActive(true);
-    }, 300); // Adjust the delay to match your transition duration
+    }, 200); // Adjust the delay to match your transition duration
 
     return () => clearTimeout(timer); // Clear the timer if the component unmounts
   }, [activeIndex]);
@@ -121,12 +120,11 @@ const HeroSection = () => {
           onMouseEnter={() => setHoveredButton('next')}
           onMouseLeave={() => setHoveredButton(null)}
         ></i>
-      </Swiper>
-      <div
+         <div
         className={`${styles.overlayImage} ${isOverlayActive ? styles.overlayImageActive : ''}`}
-        style={{backgroundImage: `url("/asset/image/hs/shape-slide-33.png")`}}
       >
       </div>
+      </Swiper>
     </div>
   );
 };

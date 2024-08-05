@@ -126,8 +126,8 @@
   width: 100%;
 }
 .itemIcon {
-  padding: 10px;
-  font-size: 1.8rem;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;

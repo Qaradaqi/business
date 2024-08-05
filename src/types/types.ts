@@ -41,3 +41,14 @@ export interface StrategyType {
   body: string;
   href: string;
 }
+export interface ProjectStepType {
+  id: number;
+  icon: React.ReactNode;
+  title: string;
+  arrow?: React.ReactNode,
+}
+export interface FooterColItemType {
+  id: number;
+  title: string;
+  href: string;
+}

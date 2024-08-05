@@ -1,0 +1,35 @@
+.form {
+  background-color: var(--backgroundColor);
+  width: 100%;
+  border-radius: 10px;
+}
+.formInner {
+  width: 100%;
+  flex-wrap: nowrap;
+  /* padding: 5px; */
+  min-width: 370px;
+}
+.email {
+  font-family: 'Vazirmatn';
+  font-size: 1.6rem;
+  height: 40px;
+  padding: 8px;
+  color: var(--textColor);
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  margin-right: 7px;
+}
+.submit {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--backgroundColor);
+  background-color: var(--uiColor);
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-family: 'Vazirmatn';
+  cursor: pointer;
+  margin: 7px;
+}
