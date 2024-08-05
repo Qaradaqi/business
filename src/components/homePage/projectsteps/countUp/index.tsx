@@ -15,7 +15,10 @@ export const CountUpComponent: React.FC<CountUpComponentProps> = ({ targetNumber
   });
 
   useEffect(() => {
+    // console.log('inView:', inView);
+
     if (inView && count === 0) {
+      // console.log('Component in view, starting count up.');
       let currentCount = 0;
       const increment = 1;
       const duration = 2000; // Duration for the count up animation in ms
@@ -24,6 +27,7 @@ export const CountUpComponent: React.FC<CountUpComponentProps> = ({ targetNumber
       const timer = setInterval(() => {
         currentCount += increment;
         setCount(currentCount);
+        // console.log('Current count:', currentCount);
         if (currentCount >= targetNumber) {
           clearInterval(timer);
         }
@@ -33,7 +37,7 @@ export const CountUpComponent: React.FC<CountUpComponentProps> = ({ targetNumber
         clearInterval(timer);
       };
     }
-  }, [inView, targetNumber, count]);
+  }, [inView, targetNumber]);
 
   return (
     <div ref={ref}>

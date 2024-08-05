@@ -140,3 +140,15 @@ ol {
   margin-right: 20px;
   margin-left: 20px;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--uiSecondHoverColor);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--uiColor);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--textSecondColor);
+}

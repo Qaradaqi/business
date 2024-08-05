@@ -52,3 +52,8 @@ export interface FooterColItemType {
   title: string;
   href: string;
 }
+
+export interface SidebarContactType {
+  handleOpen: (item: boolean) => void;
+  isOpen: boolean;
+}

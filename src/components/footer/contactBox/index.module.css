@@ -1,0 +1,49 @@
+.contact {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 15px;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  color: var(--textColor);
+  box-shadow: (2px 2px 2px var(--textSecondColor));
+}
+.logoBox {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  padding-left: 60px;
+  border-left: 1px solid #000;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid var(--uiColor);
+}
+.companyName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--uiColor);
+}
+.contactItems {
+  /* width: 100%; */
+  flex-grow: 1;
+}
+.contactItem {
+}
+.contactItemIcon {
+}
+.contactItemInfo {
+}
+.contactItemTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--textColor);
+}
+.contactItemBody {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--textSecondColor);
+}

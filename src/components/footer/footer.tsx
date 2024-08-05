@@ -3,6 +3,7 @@ import styles from './footer.module.css';
 import { FooterColItemType } from '@/types/types';
 import SubscribeForm from './subscribeForm';
 import Image from 'next/image';
+import FooterContactBox from './contactBox';
 
 interface Col {
   colTitle: string;
@@ -84,6 +85,9 @@ const Footer = () => {
   return (
     <div className={styles.footerContent}>
       <div className='container'>
+        <div className={styles.contactBox}>
+          <FooterContactBox />
+        </div>
         <div className={`${styles.cols} flex align-start justify-between`}>
           <div className={`${styles.col} flex flex-column align-start gap-20`}>
             <h2 className={styles.colTitle}>درباره ما</h2>
@@ -138,7 +142,7 @@ const Footer = () => {
       </div>
       <div className={`${styles.designer} flex align-center justify-center`}>
         <span>طراحی شده توسط: </span>
-        <span style={{color: '#f13'}}>hqaradaqi</span>
+        <span style={{ color: '#f13' }}>hqaradaqi</span>
       </div>
     </div>
   );

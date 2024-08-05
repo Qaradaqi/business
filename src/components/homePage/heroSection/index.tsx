@@ -72,8 +72,6 @@ const HeroSection = () => {
           nextEl: nextRef.current,
         }}
         dir='rtl'
-        effect={'coverflow'}
-        grabCursor={true}
         // pagination={{ type: "bullets", clickable: true }}
         autoplay={
           {

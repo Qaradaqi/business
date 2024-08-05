@@ -1,0 +1,65 @@
+.sidebarContactInfo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+.sidebarInfo {
+  position: fixed;
+  width: 340px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 16;
+  padding: 80px 25px;
+}
+.closeBox {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.close {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 13.13px;
+  background-color: var(--uiColor);
+  border-radius: 12px;
+  flex-grow: 0;
+}
+.logoBox {
+  width: 100%;
+  height: auto;
+}
+.logo {
+  width: 85px;
+  height: 85px;
+}
+.logo img {
+  border-radius: 50%;
+  border: 1px solid var(--uiColor);
+  filter: drop-shadow(2px 2px 2px var(--uiColor));
+}
+.title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--textColor);
+  margin: 10px 0;
+}
+.items {
+  width: 100%;
+}
+.item .itemTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  counter-reset: var(--textColor);
+}
+.item .itemBody {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--textSecondColor);
+}

@@ -1,7 +1,9 @@
 .footerContent {
   background-color: #051934;
-  padding: 85px 15px 35px;
+  padding: 35px 15px 35px;
   color: #fff;
+  position: relative;
+  margin-top: 150px;
 }
 .cols {
   padding: 45px 0;
@@ -90,4 +92,9 @@
   font-size: 1.2rem;
   color: var(--backgroundColor);
   padding: 5px 0;
+}
+.contactBox {
+  width: 100%;
+  position: relative;
+  top: -100px;
 }
